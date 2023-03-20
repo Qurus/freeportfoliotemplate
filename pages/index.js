@@ -13,8 +13,9 @@ import {
 } from "../components"
 import useFadeInOnScroll from "../hooks/useFadeInOnScroll"
 import withMotionProps from "../components/withMotionProps"
+import withLoader from "../components/withLoader"
 
-export default function Home() {
+const Home = () => {
   const componentArray = [
     NavBar,
     Profile,
@@ -47,3 +48,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default withLoader(Home)

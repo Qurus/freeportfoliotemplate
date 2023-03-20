@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 const useFadeInOnScroll = (staggerDelay = 0) => {
   const [motionProps, setMotionProps] = useState(null)
   const [ref, inView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
     threshold: 0.1,
   })
 

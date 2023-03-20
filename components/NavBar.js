@@ -2,10 +2,8 @@ import { useState } from "react";
 import ThemeSwitcher from "./changeTheme";
 import Hamburger from "../svg/Hamburger";
 import ArrowRight from "../svg/ArrowRight"
-import { useRouter } from "next/router"
 
 export default function NavBar() {
-  const router = useRouter()
 
   const handleScrollTo = (id) => {
     const yOffset = -130
@@ -19,6 +17,8 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleDrawer = () => setIsOpen((prev) => !prev)
+
+  const closeDrawer = () => setIsOpen(false)
 
   return (
     <div>
@@ -35,7 +35,10 @@ export default function NavBar() {
           </div>
         </div>
         <div className="navbar-center">
-          <a href="/" className="btn btn-ghost normal-case text-3xl text-green-400 font-light">
+          <a
+            href="/"
+            className="btn btn-ghost normal-case text-3xl text-green-400 font-light"
+          >
             Ali Web Wizard
           </a>
         </div>
@@ -65,31 +68,74 @@ export default function NavBar() {
         <div className="drawer-body">
           <ul className="menu">
             <li>
-              <button onClick={() => handleScrollTo("home")}>Home</button>
+              <button
+                onClick={() => {
+                  handleScrollTo("home")
+                  closeDrawer()
+                }}
+              >
+                Home
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo("about")}>About</button>
+              <button
+                onClick={() => {
+                  handleScrollTo("about")
+                  closeDrawer()
+                }}
+              >
+                About
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo("resume")}>Resume</button>
+              <button
+                onClick={() => {
+                  handleScrollTo("resume")
+                  closeDrawer()
+                }}
+              >
+                Resume
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo("services")}>
+              <button
+                onClick={() => {
+                  handleScrollTo("services")
+                  closeDrawer()
+                }}
+              >
                 Services
               </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo("portfolio")}>
+              <button
+                onClick={() => {
+                  handleScrollTo("portfolio")
+                  closeDrawer()
+                }}
+              >
                 Portfolio
               </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo("testimonials")}>
+              <button
+                onClick={() => {
+                  handleScrollTo("testimonials")
+                  closeDrawer()
+                }}
+              >
                 Testimonials
               </button>
             </li>
             <li>
-              <button onClick={() => handleScrollTo("contact")}>Contact</button>
+              <button
+                onClick={() => {
+                  handleScrollTo("contact")
+                  closeDrawer()
+                }}
+              >
+                Contact
+              </button>
             </li>
           </ul>
         </div>

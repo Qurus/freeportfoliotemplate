@@ -1,5 +1,35 @@
 import React from "react"
 import { FaBiking } from "react-icons/fa"
+import { motion, useAnimation } from "framer-motion"
+import { useInView } from "react-intersection-observer"
+
+const ProgressBar = ({ skill }) => {
+  const { ref, inView } = useInView()
+  const controls = useAnimation()
+
+  const width = `${skill.percentage}%`
+
+  if (inView) {
+    controls.start({
+      width,
+      transition: { duration: 1 },
+    })
+  }
+
+  return (
+    <div className="border p-6 rounded-xl" ref={ref}>
+      <h3 className="text-xl font-bold mb-4">{skill.title}</h3>
+      <div className="h-2 bg-gray-200 rounded">
+        <motion.div
+          className="h-2 bg-gradient-to-r from-green-800 to-green-500 rounded"
+          initial={{ width: "0%" }}
+          animate={controls}
+        ></motion.div>
+      </div>
+    </div>
+  )
+}
+
 const Skills = () => {
   const skills = [
     { title: "HTML5", percentage: 90 },
@@ -21,15 +51,7 @@ const Skills = () => {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {skills.map((skill, index) => (
-            <div key={index} className="border p-6 rounded-xl">
-              <h3 className="text-xl font-bold mb-4">{skill.title}</h3>
-              <div className="h-2 bg-gray-200 rounded">
-                <div
-                  className="h-2 bg-green-500 rounded"
-                  style={{ width: `${skill.percentage}%` }}
-                ></div>
-              </div>
-            </div>
+            <ProgressBar key={index} skill={skill} />
           ))}
         </div>
       </div>

@@ -5,7 +5,7 @@ export default function Profile() {
 
       <section className="card max-w-7xl mx-auto bg-base-100 border">
         <div className="flex justify-between px-8 py-3">
-          <div className="text-3xl">Elan Masks</div>
+          <div className="text-3xl">AliDevWizard</div>
           <div>Developer</div>
         </div>
         <div className="flex items-center justify-center py-5">

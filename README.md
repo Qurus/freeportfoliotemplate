@@ -1,6 +1,6 @@
 # Ali Web Wizard Portfolio
 
-Welcome to My Awesome Project! This is a free project that uses ReactJS and NextJS, designed specifically for junior developers who are looking to improve their skills.
+Welcome to My Portfolio Project! This is a free project that uses ReactJS and NextJS, designed specifically for junior developers who are looking to improve their skills.
 
 ## Libraries Used
 
@@ -14,7 +14,7 @@ This project uses several third-party libraries to improve its functionality and
 
 ## Getting Started
 
-To get started with My Awesome Project, follow these steps:
+To get started with My Portfolio Project, follow these steps:
 
 1. Clone this repository to your local machine.
 2. Install the required dependencies by running `npm install`.
@@ -28,9 +28,9 @@ We welcome contributions from all developers, regardless of experience level. If
 
 ## Upcoming Features
 
-We're always working to improve My Awesome Project! Here are some upcoming features that we're currently working on:
+I'am always working to improve My Portfolio Project! Here are some upcoming features that we're currently working on:
 
 - An `/app` folder for NextJS integration.
 - Implementation of NextAuth for authentication and authorization.
 
-Thanks for checking out our project! We hope you enjoy using it as much as we enjoyed building it.
+Thanks for checking out our project! I hope you enjoy using it as much as we enjoyed building it.
